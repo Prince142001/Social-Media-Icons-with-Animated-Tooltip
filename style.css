@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  gap: 1.4em;
+  margin-top: 100px;
+}
+
+ul li {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffeef4;
+  color: #0c356a;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+ul li a:hover {
+  background-color: #0c356a;
+  color: #f7f7f7;
+}
+
+ul li a i {
+  font-size: 28px;
+}
+
+ul li span {
+  position: absolute;
+  top: -74%;
+  background-color: #0c356a;
+  color: #f7f7f7;
+  width: fit-content;
+  height: 0px;
+  border-radius: 3px;
+  font-size: 16px;
+  text-transform: capitalize;
+  /* padding: 4px 10px; */
+  opacity: 0;
+  transform: scale(0);
+  transition: height 0.2s ease;
+}
+
+ul li span::after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-color: #0c356a transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+}
+
+ul li:hover span {
+  height: 33px;
+  padding: 4px 10px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+ul li span:hover + a {
+  background-color: #0c356a;
+}
+
+ul li span:hover + a > i {
+  color: #f7f7f7;
+}
